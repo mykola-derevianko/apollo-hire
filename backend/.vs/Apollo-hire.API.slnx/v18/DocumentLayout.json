@@ -1,7 +1,40 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Projects\\apollo-hire\\backend\\Apollo-hire.API\\",
-  "Documents": [],
+  "WorkspaceRootPath": "D:\\Projects\\apollo-hire\\backend\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{FAA12B16-5193-0090-33BB-2426737F2198}|Apollo-hire.API.csproj|d:\\projects\\apollo-hire\\backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{FAA12B16-5193-0090-33BB-2426737F2198}|Apollo-hire.API.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FAA12B16-5193-0090-33BB-2426737F2198}|Apollo-hire.API.csproj|d:\\projects\\apollo-hire\\backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FAA12B16-5193-0090-33BB-2426737F2198}|Apollo-hire.API.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FAA12B16-5193-0090-33BB-2426737F2198}|Apollo-hire.API.csproj|d:\\projects\\apollo-hire\\backend\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FAA12B16-5193-0090-33BB-2426737F2198}|Apollo-hire.API.csproj|solutionrelative:data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FAA12B16-5193-0090-33BB-2426737F2198}|Apollo-hire.API.csproj|d:\\projects\\apollo-hire\\backend\\models\\configurations\\jobapplicationeventconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FAA12B16-5193-0090-33BB-2426737F2198}|Apollo-hire.API.csproj|solutionrelative:models\\configurations\\jobapplicationeventconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FAA12B16-5193-0090-33BB-2426737F2198}|Apollo-hire.API.csproj|d:\\projects\\apollo-hire\\backend\\models\\jobapplicationevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FAA12B16-5193-0090-33BB-2426737F2198}|Apollo-hire.API.csproj|solutionrelative:models\\jobapplicationevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FAA12B16-5193-0090-33BB-2426737F2198}|Apollo-hire.API.csproj|d:\\projects\\apollo-hire\\backend\\models\\jobapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FAA12B16-5193-0090-33BB-2426737F2198}|Apollo-hire.API.csproj|solutionrelative:models\\jobapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FAA12B16-5193-0090-33BB-2426737F2198}|Apollo-hire.API.csproj|d:\\projects\\apollo-hire\\backend\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FAA12B16-5193-0090-33BB-2426737F2198}|Apollo-hire.API.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FAA12B16-5193-0090-33BB-2426737F2198}|Apollo-hire.API.csproj|d:\\projects\\apollo-hire\\backend\\models\\configurations\\jobapplicationconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FAA12B16-5193-0090-33BB-2426737F2198}|Apollo-hire.API.csproj|solutionrelative:models\\configurations\\jobapplicationconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -18,6 +51,110 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Projects\\apollo-hire\\backend\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "D:\\Projects\\apollo-hire\\backend\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-02-11T19:20:27.272Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "D:\\Projects\\apollo-hire\\backend\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\AppDbContext.cs",
+              "ToolTip": "D:\\Projects\\apollo-hire\\backend\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "Data\\AppDbContext.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAIwBgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-11T17:13:00.307Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Projects\\apollo-hire\\backend\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\Projects\\apollo-hire\\backend\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-11T17:12:40.157Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "User.cs",
+              "DocumentMoniker": "D:\\Projects\\apollo-hire\\backend\\Models\\User.cs",
+              "RelativeDocumentMoniker": "Models\\User.cs",
+              "ToolTip": "D:\\Projects\\apollo-hire\\backend\\Models\\User.cs",
+              "RelativeToolTip": "Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-11T17:10:51.412Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "JobApplication.cs",
+              "DocumentMoniker": "D:\\Projects\\apollo-hire\\backend\\Models\\JobApplication.cs",
+              "RelativeDocumentMoniker": "Models\\JobApplication.cs",
+              "ToolTip": "D:\\Projects\\apollo-hire\\backend\\Models\\JobApplication.cs",
+              "RelativeToolTip": "Models\\JobApplication.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-11T17:10:42.671Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "JobApplicationEvent.cs",
+              "DocumentMoniker": "D:\\Projects\\apollo-hire\\backend\\Models\\JobApplicationEvent.cs",
+              "RelativeDocumentMoniker": "Models\\JobApplicationEvent.cs",
+              "ToolTip": "D:\\Projects\\apollo-hire\\backend\\Models\\JobApplicationEvent.cs",
+              "RelativeToolTip": "Models\\JobApplicationEvent.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-11T17:10:28.744Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "JobApplicationEventConfiguration.cs",
+              "DocumentMoniker": "D:\\Projects\\apollo-hire\\backend\\Models\\Configurations\\JobApplicationEventConfiguration.cs",
+              "RelativeDocumentMoniker": "Models\\Configurations\\JobApplicationEventConfiguration.cs",
+              "ToolTip": "D:\\Projects\\apollo-hire\\backend\\Models\\Configurations\\JobApplicationEventConfiguration.cs",
+              "RelativeToolTip": "Models\\Configurations\\JobApplicationEventConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-11T17:08:37.408Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "JobApplicationConfiguration.cs",
+              "DocumentMoniker": "D:\\Projects\\apollo-hire\\backend\\Models\\Configurations\\JobApplicationConfiguration.cs",
+              "RelativeDocumentMoniker": "Models\\Configurations\\JobApplicationConfiguration.cs",
+              "ToolTip": "D:\\Projects\\apollo-hire\\backend\\Models\\Configurations\\JobApplicationConfiguration.cs",
+              "RelativeToolTip": "Models\\Configurations\\JobApplicationConfiguration.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAABEwC8AAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-11T17:08:36.862Z",
+              "EditorCaption": ""
             }
           ]
         }

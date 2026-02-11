@@ -23,6 +23,14 @@ bld/
 [Ll]og/
 [Ll]ogs/
 
+# Visual Studio
+.vs/
+bin/
+obj/
+*.user
+*.suo
+*.sqlite
+
 # .NET Core
 project.lock.json
 project.fragment.lock.json
@@ -53,6 +61,8 @@ CodeCoverage/
 TestResult.xml
 nunit-*.xml
 
+#EF Core Migrations
+Migrations/
 
 
 #Angular
