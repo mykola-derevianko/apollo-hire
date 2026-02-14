@@ -17,18 +17,13 @@ namespace Apollo_hire.API.Models.Configurations
                    .IsRequired()
                    .HasMaxLength(255);
 
-            builder.Property(u => u.FirstName)
-                   .IsRequired()
-                   .HasMaxLength(100);
-
-            builder.Property(u => u.LastName)
+            builder.Property(u => u.Username)
                    .IsRequired()
                    .HasMaxLength(100);
 
             builder.Property(u => u.CreatedAt)
                    .HasDefaultValueSql("now() at time zone 'utc'")
                    .IsRequired();
-
         }
     }
 }
