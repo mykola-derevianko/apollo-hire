@@ -1,12 +1,12 @@
 import { Routes } from '@angular/router';
-import { Dashboard } from './dashboard/dashboard';
+import { JobApplications } from './job-applications/job-applications';
 import { authGuardFn } from '@auth0/auth0-angular';
 import { PageWLogin } from './page-w-login/page-w-login';
 
 export const routes: Routes = [
     {
         path: 'dashboard',
-        component: Dashboard,
+        component: JobApplications,
         canActivate: [authGuardFn]
     },
     {

@@ -1,0 +1,70 @@
+<div class="ml-14 mt-5">
+    <div class="flex items-start">
+        <svg si-file-icon class="mt-2 w-10 h-10"></svg>
+        <div class="ml-2 flex flex-col gap-3">
+            <p class="text-5xl font-bold leading-none">Applications</p>
+            <p class="text-2xl text-[#9A9A9A] font-semibold">Most recent active interviews</p>
+        </div>
+    </div>
+
+    <div class="mt-5 flex items-center-safe gap-4">
+        <div class="flex relative w-full max-w-sm">
+            <input 
+                type="text" 
+                placeholder="Search applications..." 
+                class="bg-[#F2F2F2] rounded-full shadow-lg p-2 pl-4 font-semibold w-full transition-all duration-300 ease-in-out focus:ring-1 focus:ring-gray-300 focus:outline-none"
+                (input)="onSearch($event.target.value)">
+            <svg 
+                class="absolute stroke-black right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400 pointer-events-none"
+                si-search-icon>
+            </svg>
+        </div>
+        <button
+            type="button"
+            class="flex justify-center items-center bg-[#D4E8F1] shadow-md shadow-gray-300 rounded-full w-9 h-9"
+            aria-label="Open add application modal"
+            (click)="openAddModal()">
+            <svg si-plus-icon class="cursor-pointer w-7 h-7"></svg>
+        </button>
+        <div class="flex justify-center items-center bg-[#FFE8E8] shadow-md shadow-gray-300 rounded-full w-9 h-9">
+            <svg si-minus-icon class="cursor-pointer w-7 h-7"></svg>
+        </div>
+
+    </div>
+</div>
+
+
+<job-applications-table 
+    [data]="applications() ?? undefined"
+    [loading]="loading()"
+    [total]="total()"
+    [currentPageSize]="currentPageSize()"
+    [currentPage]="currentPage()"
+    (search)="onSearch($event)"
+    (sort)="onSort($event)"
+    (pageChange)="onPageChange($event)"
+    (pageSize)="onPageSizeChange($event)"
+    class="w-fit"
+/>
+
+@if (isAddModalOpen()) {
+    <div
+        class="fixed inset-0 z-50 flex items-center justify-center bg-black/40"
+        (click)="closeAddModal()">
+        <div
+            class="w-full max-w-md rounded-xl bg-white p-6 shadow-lg"
+            (click)="$event.stopPropagation()">
+            <div class="mb-4 flex items-center justify-between">
+                <h2 class="text-2xl font-bold">New Application</h2>
+                <button
+                    type="button"
+                    class="rounded px-2 py-1 text-sm font-semibold"
+                    aria-label="Close add application modal"
+                    (click)="closeAddModal()">
+                    Close
+                </button>
+            </div>
+            <p class="text-sm text-gray-600">Your form content goes here.</p>
+        </div>
+    </div>
+}

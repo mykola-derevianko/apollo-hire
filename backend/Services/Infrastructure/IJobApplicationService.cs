@@ -5,6 +5,11 @@ namespace Apollo_hire.API.Services.Infrastructure
 {
     public interface IJobApplicationService
     {
-        Task<ICollection<JobApplicationResponseDto>> GetUserAplicationsAsync(Guid userId);
+        Task<PagedResponseDto<JobApplicationResponseDto>> GetUserApplicationsByAuth0IdAsync(
+            string auth0UserId, 
+            JobApplicationQueryParameters queryParameters
+        );
+
+
     }
 }

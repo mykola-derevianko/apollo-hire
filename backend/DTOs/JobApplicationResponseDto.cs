@@ -1,4 +1,5 @@
 ﻿using Apollo_hire.API.Models.Enums;
+using System.Text.Json.Serialization;
 
 namespace Apollo_hire.API.DTOs
 {
@@ -10,8 +11,13 @@ namespace Apollo_hire.API.DTOs
         public string CompanyName { get; set; } = null!;
         public string JobTitle { get; set; } = null!;
         public string Location { get; set; } = null!;
+
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public WorkType WorkType { get; set; }
+        
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public ApplicationStatus Status { get; set; }
+        
         public string Source { get; set; } = null!;
         public string? SourceUrl { get; set; }
         public DateTime? AppliedDate { get; set; }

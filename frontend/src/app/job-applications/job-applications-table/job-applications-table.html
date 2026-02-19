@@ -1,0 +1,162 @@
+<div class="flex flex-col w-fit pt-8 pl-10">
+  <table class="border-collapse text-md">
+    <thead>
+      <tr>
+        <th class="text-left px-4 py-3 font-semibold">
+          <span class="flex items-center">
+            <svg si-briefcase-2-icon class="w-6 h-6 text-[#606060]"></svg>
+            <p class="text-xl ml-2">Company</p>
+          </span>
+        </th>
+
+        <th class="text-left px-4 py-3 font-semibold">
+          <span class="flex items-center">
+            <svg si-square-letter-t-icon class="w-6 h-6 text-[#606060]"></svg>
+            <p class="text-xl ml-2">Title</p>
+          </span>
+        </th>
+
+        <th class="text-left px-4 py-3 font-semibold">
+          <span class="flex items-center">
+              <svg si-map-pin-icon class="w-6 h-6 inline-block text-[#606060]"></svg>
+            <p class="text-xl ml-2">Location</p>
+          </span>
+        </th>
+
+        <th class="text-left px-4 py-3 font-semibold">
+          <span class="flex items-center">
+            <svg si-building-estate-icon class="w-6 h-6 text-[#606060]"></svg>
+            <p class="text-xl ml-2">Work Type</p>
+          </span>
+        </th>
+
+        <th class="text-center px-4 py-3 font-semibold">
+          <span class="flex items-center justify-center">
+            <svg si-menu-2-icon class="w-6 h-6 text-[#606060]"></svg>
+            <p class="text-xl ml-2">Status</p>
+          </span>
+        </th>
+
+        <th class="text-center px-4 py-3 font-semibold">
+          <span class="flex items-center justify-center">
+            <svg si-calendar-week-icon class="w-6 h-6 text-[#606060]"></svg>
+            <p class="text-xl ml-2">Application Date</p>
+          </span>
+        </th>
+      </tr>
+    </thead>
+
+    <tbody>
+      @for (application of data()?.items || []; track application.id) {
+        <tr class="hover:bg-gray-50 transition">
+          <!-- Company -->
+          <td class="px-4 py-2 border-b border-r border-t border-gray-200 font-roboto">
+            {{ application.companyName }}
+          </td>
+
+          <!-- Job Title with link -->
+          <td class="px-4 py-2 border-b border-r border-t border-gray-200 font-roboto">
+            <a
+              [href]="application.sourceUrl || null"
+              [ngClass]="{
+                'underline cursor-pointer': application.sourceUrl,
+                'no-underline cursor-default': !application.sourceUrl
+              }"
+            >
+              {{ application.jobTitle }}
+            </a>
+          </td>
+
+          <!-- Location -->
+          <td class="px-4 py-2 border-b border-r border-t border-gray-200 font-roboto">
+            {{ application.location }}
+          </td>
+
+          <!-- Work Type -->
+          <td class="px-4 py-2 border-b border-r border-t border-gray-200 font-roboto text-center">
+            {{ application.workType }}
+          </td>
+
+          <!-- Status Badge -->
+          <td class="px-4 py-2 border-b border-r border-t border-gray-200 font-roboto text-center">
+            <span
+              class="inline-flex items-center justify-center w-24 h-7 rounded-xl text-sm font-medium"
+              [ngClass]="statusClasses[application.status]"
+            >
+              {{ application.status }}
+            </span>
+          </td>
+
+          <!-- Application Date -->
+          <td class="px-4 py-2 border-b border-r border-t border-gray-200 font-roboto text-center">
+            {{ application.appliedDate | date:'mediumDate' }}
+          </td>
+        </tr>
+      }
+    </tbody>
+  </table>
+
+  <div class="flex justify-between mt-5 pl-4 w-full items-center">
+    <!-- Page Size -->
+    <div class="flex items-center">
+      <label for="pageSize" class="mr-2 text-md font-medium text-gray-700">Items per page:</label>
+      <select
+        #pageSizeSelect
+        id="pageSize"
+        class="rounded-md p-1"
+        [value]="currentPageSize()"
+        (change)="onPageSizeChange(+pageSizeSelect.value)">
+        <option [value]="5">5</option>
+        <option [value]="10">10</option>
+        <option [value]="20">20</option>
+        <option [value]="50">50</option>
+        <option [value]="100">100</option>
+      </select>
+    </div>
+
+    <!-- Buttons -->
+    <div class="flex gap-5">
+      <svg 
+        si-chevron-left-pipe-icon 
+        class="cursor-pointer" 
+        [class.opacity-50]="currentPage() === 0" 
+        [class.pointer-events-none]="currentPage() === 0"
+        (click)="onPageChange(0)">
+      </svg>
+
+      <svg 
+        si-chevron-left-icon 
+        class="cursor-pointer" 
+        [class.opacity-50]="currentPage() === 0" 
+        [class.pointer-events-none]="currentPage() === 0"
+        (click)="onPageChange(currentPage() - 1)">
+      </svg>
+
+      <p class="text-md font-medium text-gray-700">
+        Page {{ currentPage() + 1 }} of {{ pages() }}
+      </p>
+
+      <svg 
+        si-chevron-right-icon 
+        class="cursor-pointer" 
+        [class.opacity-50]="currentPage() === pages() - 1" 
+        [class.pointer-events-none]="currentPage() === pages() - 1"
+        (click)="onPageChange(currentPage() + 1)">
+      </svg>
+
+      <svg 
+        si-chevron-right-pipe-icon 
+        class="cursor-pointer" 
+        [class.opacity-50]="currentPage() === pages() - 1" 
+        [class.pointer-events-none]="currentPage() === pages() - 1"
+        (click)="onPageChange(pages() - 1)">
+      </svg>
+
+    </div>
+
+    <div class="text-md font-medium text-gray-700">
+      <p>Total count: {{ data()?.totalCount }}</p>
+    </div>
+
+  </div>
+</div>
