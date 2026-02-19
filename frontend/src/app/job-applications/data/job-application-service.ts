@@ -4,6 +4,7 @@ import { debounceSignal } from '../../utils/debounce-signal';
 import { PagedResponseDto } from '../models/paged-response-dto';
 import { environment } from '../../../environments/environment.development';
 import { JobApplicationResponseDto } from '../models/job-application-response-dto';
+import { SortDirection, SortEvent } from '../../shared/directives/sortable-header-directive';
 
 @Injectable({
   providedIn: 'root',
@@ -38,6 +39,8 @@ export class JobApplicationService {
   page = computed(() => this._query().pageIndex);
   pageSize = computed(() => this._query().pageSize);
   isLoading = this.dataResource.isLoading;
+  currentColumn = computed(() => this._query().sortColumn);
+  sortDirection = computed(() => this._query().sortDirection as SortDirection);
 
   search(searchQuery: string) {
     this._searchInput.set(searchQuery);
@@ -49,5 +52,8 @@ export class JobApplicationService {
 
   setPageSize(pageSize: number) {
     this._query.update(query => ({ ...query, pageSize, pageIndex: 0 }));
+  }
+  setSort(sort: SortEvent) {
+    this._query.update(query => ({ ...query, sortColumn: sort.column, sortDirection: sort.direction, pageIndex: 0 }));
   }
 }

@@ -1,11 +1,12 @@
 import { Component, input, output, computed } from '@angular/core';
 import { DatePipe, NgClass} from '@angular/common';
 
-import { SiCalendarWeekIcon, SiSquareLetterTIcon, SiBuildingEstateIcon, SiMapPinIcon, SiMenu2Icon, SiBriefcase2Icon, SiChevronRightIcon, SiChevronLeftPipeIcon, SiChevronRightPipeIcon, SiChevronLeftIcon } from '@semantic-icons/tabler-icons/outline';
+import { SiCalendarWeekIcon, SiSquareLetterTIcon, SiBuildingEstateIcon, SiMapPinIcon, SiMenu2Icon, SiBriefcase2Icon, SiChevronRightIcon, SiChevronLeftPipeIcon, SiChevronRightPipeIcon, SiChevronLeftIcon, SiArrowDownIcon, SiArrowUpIcon} from '@semantic-icons/tabler-icons/outline';
 
 import { ApplicationStatus } from '../models/application-status';
 import { JobApplicationResponseDto } from '../models/job-application-response-dto';
 import { PagedResponseDto } from '../models/paged-response-dto';
+import { SortableHeaderDirective, SortDirection, SortEvent } from "../../shared/directives/sortable-header-directive";
 
 @Component({
   selector: 'job-applications-table',
@@ -21,13 +22,16 @@ import { PagedResponseDto } from '../models/paged-response-dto';
     SiChevronRightIcon,
     SiChevronLeftPipeIcon,
     SiChevronRightPipeIcon,
-    SiChevronLeftIcon
+    SiChevronLeftIcon,
+    SortableHeaderDirective,
+    SiArrowDownIcon,
+    SiArrowUpIcon,
 ],
   templateUrl: './job-applications-table.html',
 })
 export class JobApplicationsTable { 
   search = output<string>();
-  sort = output<string>();
+  sort = output<SortEvent>();
   pageChange = output<number>();
   pageSize = output<number>();
 
@@ -36,6 +40,9 @@ export class JobApplicationsTable {
   total = input<number>(0);
   currentPageSize = input<number>(10);
   currentPage = input<number>(0);
+
+  currentColumn = input<string>('');
+  currentDirection = input<SortDirection>('');
 
   pages = computed(() => Math.ceil(this.total() / this.currentPageSize()));
 
@@ -51,7 +58,7 @@ export class JobApplicationsTable {
     this.search.emit((event.target as HTMLInputElement).value || '');
   }
 
-  onSort(sort: string) {
+  onSort(sort: SortEvent) {
     this.sort.emit(sort);
   }
 

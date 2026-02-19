@@ -2,45 +2,111 @@
   <table class="border-collapse text-md">
     <thead>
       <tr>
-        <th class="text-left px-4 py-3 font-semibold">
+        <th 
+            sortable="companyName"
+            (sort)="onSort($event)"
+            [currentColumn]="currentColumn()"
+            [currentDirection]="currentDirection()"
+            class="text-left px-4 py-3 font-semibold">
           <span class="flex items-center">
             <svg si-briefcase-2-icon class="w-6 h-6 text-[#606060]"></svg>
             <p class="text-xl ml-2">Company</p>
+            <svg
+              si-arrow-up-icon
+              class="w-4 h-4 ml-1 transition-transform duration-200"
+              [class.opacity-0]="currentColumn() !== 'companyName'"
+              [class.rotate-180]="currentColumn() === 'companyName' && currentDirection() === 'DESC'">
+            </svg>
           </span>
         </th>
 
-        <th class="text-left px-4 py-3 font-semibold">
+        <th 
+            sortable="jobTitle"
+            (sort)="onSort($event)"
+            [currentColumn]="currentColumn()"
+            [currentDirection]="currentDirection()"
+            class="text-left px-4 py-3 font-semibold">
           <span class="flex items-center">
             <svg si-square-letter-t-icon class="w-6 h-6 text-[#606060]"></svg>
-            <p class="text-xl ml-2">Title</p>
+            <p class="text-xl ml-2">Title</p>            
+             <svg
+              si-arrow-up-icon
+              class="w-4 h-4 ml-1 transition-transform duration-200"
+              [class.opacity-0]="currentColumn() !== 'jobTitle'"
+              [class.rotate-180]="currentColumn() === 'jobTitle' && currentDirection() === 'DESC'"
+            ></svg>
           </span>
         </th>
 
-        <th class="text-left px-4 py-3 font-semibold">
+        <th 
+            sortable="location"
+            (sort)="onSort($event)"
+            [currentColumn]="currentColumn()"
+            [currentDirection]="currentDirection()"
+            class="text-left px-4 py-3 font-semibold">
           <span class="flex items-center">
               <svg si-map-pin-icon class="w-6 h-6 inline-block text-[#606060]"></svg>
-            <p class="text-xl ml-2">Location</p>
+              <p class="text-xl ml-2">Location</p>
+              <svg
+                si-arrow-up-icon
+                class="w-4 h-4 ml-1 transition-transform duration-200"
+                [class.opacity-0]="currentColumn() !== 'location'"
+                [class.rotate-180]="currentColumn() === 'location' && currentDirection() === 'DESC'">
+              </svg>
           </span>
         </th>
 
-        <th class="text-left px-4 py-3 font-semibold">
+        <th 
+            sortable="workType"
+            (sort)="onSort($event)"
+            [currentColumn]="currentColumn()"
+            [currentDirection]="currentDirection()"
+            class="text-left px-4 py-3 font-semibold">
           <span class="flex items-center">
             <svg si-building-estate-icon class="w-6 h-6 text-[#606060]"></svg>
             <p class="text-xl ml-2">Work Type</p>
+            <svg
+              si-arrow-up-icon
+              class="w-4 h-4 ml-1 transition-transform duration-200"
+              [class.opacity-0]="currentColumn() !== 'workType'"
+              [class.rotate-180]="currentColumn() === 'workType' && currentDirection() === 'DESC'">
+            </svg>
           </span>
         </th>
 
-        <th class="text-center px-4 py-3 font-semibold">
+        <th 
+            sortable="status"
+            (sort)="onSort($event)"
+            [currentColumn]="currentColumn()"
+            [currentDirection]="currentDirection()"
+            class="text-center px-4 py-3 font-semibold">
           <span class="flex items-center justify-center">
             <svg si-menu-2-icon class="w-6 h-6 text-[#606060]"></svg>
             <p class="text-xl ml-2">Status</p>
+            <svg
+              si-arrow-up-icon
+              class="w-4 h-4 ml-1 transition-transform duration-200"
+              [class.opacity-0]="currentColumn() !== 'status'"
+              [class.rotate-180]="currentColumn() === 'status' && currentDirection() === 'DESC'">
+            </svg>
           </span>
         </th>
 
-        <th class="text-center px-4 py-3 font-semibold">
+        <th 
+            sortable="appliedDate"
+            (sort)="onSort($event)"
+            [currentColumn]="currentColumn()"
+            [currentDirection]="currentDirection()"
+            class="text-center px-4 py-3 font-semibold">
           <span class="flex items-center justify-center">
             <svg si-calendar-week-icon class="w-6 h-6 text-[#606060]"></svg>
             <p class="text-xl ml-2">Application Date</p>
+            <svg
+              si-arrow-up-icon
+              class="w-4 h-4 ml-1 transition-transform duration-200"
+              [class.opacity-0]="currentColumn() !== 'appliedDate'"
+              [class.rotate-180]="currentColumn() === 'appliedDate' && currentDirection() === 'DESC'">
+            </svg>
           </span>
         </th>
       </tr>

@@ -40,6 +40,9 @@
     [total]="total()"
     [currentPageSize]="currentPageSize()"
     [currentPage]="currentPage()"
+    [currentColumn]="currentColumn()"
+    [currentDirection]="sortDirection()"
+
     (search)="onSearch($event)"
     (sort)="onSort($event)"
     (pageChange)="onPageChange($event)"

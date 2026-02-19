@@ -3,6 +3,7 @@ import { AuthService } from '@auth0/auth0-angular';
 import { JobApplicationService } from './data/job-application-service';
 import { JobApplicationsTable } from "./job-applications-table/job-applications-table";
 import { SiFileIcon, SiPlusIcon, SiSearchIcon, SiMinusIcon } from "@semantic-icons/tabler-icons/outline";
+import { SortEvent } from '../shared/directives/sortable-header-directive';
 @Component({
   selector: 'job-applications',
   imports: [JobApplicationsTable, SiFileIcon, SiPlusIcon, SiSearchIcon, SiMinusIcon],
@@ -17,12 +18,14 @@ export class JobApplications {
   total = computed(() => this.jobApplicationService.data()?.totalCount ?? 0);
   currentPage = computed(() => this.jobApplicationService.page());
   currentPageSize = computed(() => this.jobApplicationService.pageSize());
+  currentColumn = computed(() => this.jobApplicationService.currentColumn());
+  sortDirection = computed(() => this.jobApplicationService.sortDirection());
 
   loading = this.jobApplicationService.isLoading; 
   isAddModalOpen = signal(false);
 
-  onSort($event: string) {
-    throw new Error('Method not implemented.');
+  onSort($event: SortEvent) {
+    this.jobApplicationService.setSort($event);
   }
 
   onSearch(query: string) {
